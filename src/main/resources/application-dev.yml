@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:mysql://${dl_mysql_host:127.0.0.1}:${dl_mysql_port:3306}/${dl_mysql_dbname:fca}?charset=utf8
+    username: ${dl_mysql_username:root}
+    password: ${dl_mysql_password:root}
+    driver-class-name: com.mysql.jdbc.Driver
+#  datasource:
+#    url: jdbc:mysql://${dl_mysql_host:127.0.0.1}:${dl_mysql_port:3306}/${dl_mysql_dbname:fca_workorders}?charset=utf8
+#    username: ${dl_mysql_username:root}
+#    password: ${dl_mysql_password:123456}
+#    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  config-location: classpath:/mybatis-config.xml
+logging:
+  level:
+    root: info
+fca:
+  reminder:
+    reminderDay: ${reminderDay:7}
+
+
